@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "led_rgb.h"
+#include "led_rgb.cpp"
 
 //  Definição das cores do led rgb
 #define AMARELO 16768256 
@@ -18,8 +18,8 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-//  LED.blink(1000,AZUL);
+// LED.blink(1000,AZUL);
    
-    LED.latch(1000,MAGENTA);
+  LED.latch(1000,MAGENTA);
  
 }

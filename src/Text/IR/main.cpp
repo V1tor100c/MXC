@@ -7,7 +7,7 @@
 #define POWER 21
 
 
-controle_juiz controle_sony(34);
+controle_juiz controle_sony(12);
 
 // pra que isso serve????
 int last_button_pressed = 300; 

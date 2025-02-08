@@ -1,24 +1,47 @@
+
+// #include "mpu.h"
 #include <Arduino.h>
-#include "Controle_juiz.hpp"
-
-#define ONE 0
-#define TWO 1
-#define TREE 2
-#define POWER 21
+// #include <VL53L0X.h> 
+#include "VL53_sensors.hpp"
 
 
-controle_juiz controle_sony(34);
+#define SCL_SDIST 22
+#define SDA_SDIST 21
 
-// pra que isso serve????
-int last_button_pressed = 300; 
-int button_pressed = 300;
+// XSHUT, uma porta por sensor 
+#define SDIST_1 16  //25
+#define SDIST_2 17
+#define SDIST_3 18
 
-void setup() { // inicializa o controle 
-  Serial.begin(112500);
-  controle_sony.init();
+#define N_SENSOR 3
+int x_shut_pins[N_SENSOR] = {SDIST_1, SDIST_2, SDIST_3};
+
+VL53_sensors sensores(N_SENSOR, x_shut_pins);
+
+void setup(){
+
+  Serial.begin(115200);
+
+  sensores.sensorsInit();
+
 }
-void loop() {
-  // printa o que foir apertado
-  Serial.println(controle_sony.read());
-   
-}
+
+
+void loop(){ 
+  sensores.testRead();
+ /*
+  sensores.distanceRead();
+
+
+  for (uint8_t i = 0; i < N_SENSOR; i++){
+
+       Serial.print(" ");
+       Serial.print(String(i));
+       Serial.print(" ");
+       Serial.print(sensores.dist[i]);
+
+  }
+      Serial.println("\t\t");
+*/
+}   
+
