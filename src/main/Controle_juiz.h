@@ -1,4 +1,4 @@
-#include "IRremote.hpp"
+#include "IRremote.h"
 
 int last_button_read;
 class controle_juiz
