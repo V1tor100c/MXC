@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "led_rgb.cpp"
+#include "led_rgb.h"
 
 //  Definição das cores do led rgb
 #define AMARELO 16768256 

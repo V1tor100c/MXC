@@ -30,7 +30,7 @@ int controle_juiz::read(){
         IrReceiver.resume();
         button_read = IrReceiver.decodedIRData.command;
 
-        if(last_button_read ==0){
+        if(last_button_read == 0){
             button_read = -1;
         }
     }
