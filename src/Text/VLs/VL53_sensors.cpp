@@ -47,7 +47,7 @@ void VL53_sensors::printDistances()
 
 void VL53_sensors::testRead()
 {
-/*
+
   test = 0;
   distTest = sensor[test].readRangeSingleMillimeters();
   Serial.print("Serial.printalor do VL ");
@@ -60,7 +60,7 @@ void VL53_sensors::testRead()
   Serial.print("Serial.printalor do VL ");
   Serial.print(test);
   Serial.print(": ");
-  Serial.println(distTest);*/
+  Serial.println(distTest);
 
   test = 2;
   distTest = sensor[test].readRangeSingleMillimeters();
