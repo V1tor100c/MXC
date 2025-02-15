@@ -37,6 +37,10 @@ public:
         motor1.drive(0);
         motor2.drive(0);
     }
+    void girar(){
+        motor1.drive(-150);
+        motor2.drive(150);
+    }
 
 };
 
@@ -90,9 +94,10 @@ void Cromo::ataque()
     }
     else
     {
-        motor1.drive(-150);
-        motor2.drive(150);
-        Serial.println("Vai devagar");
+        // motor1.drive(-150);
+        // motor2.drive(150);
+        girar();
+        Serial.println("Gira");
     }
 
 #endif
