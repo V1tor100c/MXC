@@ -43,7 +43,7 @@ void loop()
     // juiz_comand = 1;
 
     juiz_comand = controle.read();
-    // Serial.println(juiz_comand);
+    Serial.println(juiz_comand);
     switch (juiz_comand)
     {
     case (0):
@@ -58,7 +58,7 @@ void loop()
 
     case (1):
         led.green();
-        // Serial.println("LUTAR !!!");
+        Serial.println("LUTAR !!!");
         cromo.ataque();
         ordem_led = 1;
         break;
