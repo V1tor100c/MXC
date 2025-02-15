@@ -12,7 +12,7 @@
 struct EnemyInfo
 {
   int vl;
-  float min_distance;
+  int min_distance;
   std::vector<int> closest_sensors;
   std::vector<int> distances;
 };

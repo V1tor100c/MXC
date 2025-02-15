@@ -17,7 +17,6 @@ public:
 
     std::vector<VL53L0X> sensor;
 
-    
     // Construtor que aceita número de sensores e os pinos
     VL53_sensors(int num, int* pins) : number_sensor(num), x_shut_pins(pins), dist(num), sensor(num) {}
     
